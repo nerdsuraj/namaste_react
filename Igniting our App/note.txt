@@ -1,0 +1,58 @@
+setup the github account
+
+talk about the what is npm packages { go to the website "https://www.npmjs.com/" }
+
+setup the npm init in our project using the  " npm init "  { command }
+
+packages.json is the dependency of the npm packages!!!
+
+talk about the how to use the parcel and setup on it!
+
+while install the there is two type of -D and -P which is use  { like _dev dependency }
+
+there is two important thing is here is that when same version of package is ther like "parcel" : "^2.8.3 " 
+
+^ =  carret { for the minor update} eg : 2.8.3 = 2.8.4
+
+~ = tilta { for the major update } eg : 2.8.3 = 3.0.0
+
+talk about the package.lock.json { its lock a exact version of the packages and keep all the dependency (history) }
+
+talk about the nodemodules { all database of the package}
+
+" transitive dependency" like package has there own dependency
+
+//parcel command 
+            npx parcel { your main file}
+
+for the execuate package use  { npx }
+
+hmr = hot module replacement // file watching algoritham creting use c++
+
+                            Parcel 🎱
+                                Dev Build
+                                Local Server
+                                HMR = Hot Module Replacement
+                                File Watching Algorithm - written in C++
+                                Caching - Faster Builds
+                                Image Optimization
+                                Minification
+                                Bundling
+                                Compress
+                                Consistent Hashing
+                                Code Splitting
+                                Differential Bundling - support older browsers
+                                Diagnostic
+                                Error Handling
+                                HTTPs
+                                Tree Shaking - remove unused code
+                                Different dev and prod bundles
+
+
+npx parcel build index.html
+
+in the package.json {its for the old version of browsers}
+write the "browserslist" : [
+    "last 2 Chrome version",
+    "last 2 firefox version"
+]

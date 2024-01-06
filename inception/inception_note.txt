@@ -1,0 +1,12 @@
+CDN  = content delivery network { for the delivery the content using the links!}
+we use the two script cdn link 
+https://unpkg.com/react@18/umd/react.development.js { this is for the core of the react and use to renderd it} 
+https://unpkg.com/react-dom@18/umd/react-dom.development.js { for this is dom manupolution}
+
+
+
+const heading = React.createElement('h1', {id:"head"}, "Namaste React from using the react!!!!");
+if you console the above one then you will find that "heading" is a object which is create by the react and and dom is showing as the tag....
+
+
+if i write the code in the root id then it will replace by the app.js file code!!
