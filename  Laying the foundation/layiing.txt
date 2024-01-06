@@ -1,0 +1,43 @@
+talk about the script in the package.json file
+
+how to start the project using npm { npm run start || npm start}
+
+react element is object ==> dom ==> HTML element
+
+JSX  = javacsript syntex { for the better write the code JavaScript XML}
+
+jsx is not html its like html syntex
+
+js engine understand the ecmascript {es6  and there version}
+
+// JSX ==> React.createElement  ==> React.createElement_JS Object ==> HTMLElement(render)
+
+babel is converting the jsx to the react.createElement
+
+
+in JSX we write the className not class that why its not HTML code !!!! { use camel case}
+
+
+for the multiple line we use the round bracket!!! ( )
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+two types of react componant
+class based componant ----  OLD
+functional based componant ---- NEW
+
+
+functional componant is just the js functional
+
+
+
+for the call the functional to render < componant_name />
+to call the react element 
+like:= 
+
+
+const Rele = ( <h1>hi this is error!!!! < componant_name />  </h1> )
+
+{Rele}  == like this one!!
