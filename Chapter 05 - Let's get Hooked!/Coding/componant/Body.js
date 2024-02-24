@@ -19,7 +19,6 @@ const Body = () => {
         } else {
             setRestaurantList(resList);
         }
-        console.log("Top Rated Clicked", showTopRated);
         setShowTopRated(!showTopRated);
     };
     return (
