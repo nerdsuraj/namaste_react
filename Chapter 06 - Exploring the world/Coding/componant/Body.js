@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useState, useEffect } from "react";
+import Shimmer from "./shimmer";;
 
 const Body = () => {
     const [restaurantList, setRestaurantList] = useState([]);
@@ -12,11 +13,11 @@ const Body = () => {
     }, [])
 
     const fetchApiData = async () => {
-        let apiListres = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING", {
+        let apiListres = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING", {
         })
 
         let json = await apiListres.json();
-        let dataManipulate = json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
+        let dataManipulate = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
         let finalData = dataManipulate.map((info) => {
             return info.info;
         })
@@ -45,7 +46,15 @@ const Body = () => {
         setRestaurantList(filterData);
     }
 
-    return (
+    // if (restaurantList.length === 0) {
+    //     return (
+    //         <div className="search-container">
+    //             <Shimmer/>
+    //         </div>
+    //     );
+    // }
+
+    return restaurantList.length === 0 ? <Shimmer/> : (
         <>
             <div className="search-container">
                 <input
@@ -65,9 +74,6 @@ const Body = () => {
             </div>
 
             <div className="restaurant-list">
-
-
-                {restaurantList.length === 0 && (<div className="loader"></div>)}
 
                 {restaurantList.length > 0 && (
                     <div className="restaurant-list">

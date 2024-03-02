@@ -9,6 +9,8 @@ export const CDN_URL = 'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,
 
 export const NEW_CDN_URL = 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/'
 
+export const shimmer_card_unit = 20;
+
 
 
 {/* <img src="https://i.ibb.co/PZ9kKQy/food-Delivery-removebg-preview.png" alt="food-Delivery-removebg-preview" border="0"> */}
