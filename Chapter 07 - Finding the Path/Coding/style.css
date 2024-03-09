@@ -445,6 +445,88 @@ body {
     border: none;
 }
 
+.item-container {
+    padding: 25px 0;
+    border-bottom: .5px solid #d3d3d3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-width: calc(100% - 144px);
+    margin-right: 53%;
+
+}
+
+#veg-logo {
+    color: #0f8a65;
+}
+
+#nonveg-logo {
+    color: #e43b4f;
+}
+
+.item-info h3 {
+    margin-right: 4px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #3e4152;
+    word-break: break-word;
+}
+
+.item-info h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #3e4152;
+}
+
+.item-info p {
+    margin-top: 14px;
+    line-height: 1.3;
+    color: rgba(40, 44, 63, .45);
+    width: 95%;
+    letter-spacing: -.3px;
+    font-size: 14px;
+}
+
+.item-img {
+    position: relative;
+    height: 114px;
+}
+
+.item-img img {
+    width: 118px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.item-img button {
+    bottom: 5%;
+    position: absolute;
+    left: 11%;
+    padding: 7px 32px;
+    box-shadow: 0 3px 8px #e9e9eb;
+    border-radius: 4px;
+    color: #60b246;
+    background-color: #fff;
+    border: #60b246;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu-counter {
+    position: absolute;
+    bottom: 5%;
+    left: 11%;
+    box-shadow: 0 3px 8px #e9e9eb;
+    background-color: #fff;
+
+}
+
 
 /* footer CSS */
 .footer {

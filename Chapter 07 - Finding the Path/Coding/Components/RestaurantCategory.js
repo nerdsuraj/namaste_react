@@ -2,8 +2,8 @@ import { useState } from "react";
 import ItemList from "./ItemList";
 
 const RestaurantCategory = ({data, resInfo}) => {
-    console.log(data)
-    console.log(resInfo);
+    console.log("data",data)
+    console.log("resInfo",resInfo);
 
     const [showItems, setShowItems] = useState(true);
 
@@ -17,6 +17,7 @@ const RestaurantCategory = ({data, resInfo}) => {
                 <h3>{data.title} ({data.itemCards.length})</h3>
                 {showItems ? <i className={`fa-solid fa-chevron-up`}></i> : <i className={`fa-solid fa-chevron-down`}></i>}
             </div>
+            {showItems && <ItemList resInfo={resInfo} items={data.itemCards} />}
             </div>
             <div className="menu-border"></div>
         </div>
