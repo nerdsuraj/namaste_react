@@ -4,6 +4,9 @@ class ProfileUserClass extends Component {
   constructor(props) {
     super(props);
     // console.log("ProfileUserClass child constructor");
+    this.state = {
+      name: "ProfileUserClass",
+    };
   }
   
   componentDidMount() {
@@ -26,6 +29,10 @@ class ProfileUserClass extends Component {
             alt={name}
             title={name}
           />
+          <button onClick={this.setState({
+            name: "suraj"
+          })} className="profile-user-close" title="Close"
+          ></button>
           <p className="profile-user-bio">{bio}</p>
       </div>
     );

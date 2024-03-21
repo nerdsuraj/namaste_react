@@ -13,3 +13,16 @@ export const NEW_CDN_URL = 'https://media-assets.swiggy.com/swiggy/image/upload/
 
 export const shimmer_card_unit = 20;
 
+export const Github_UserName = "ChetanNada";
+export const Github_Repository_Name = "Namaste-React";
+
+// Github API for User
+export const Github_API_User = "https://api.github.com/users/";
+
+export const options = {
+    method: "GET",
+    headers: {
+      Authorization: "",
+    },
+  };
+  

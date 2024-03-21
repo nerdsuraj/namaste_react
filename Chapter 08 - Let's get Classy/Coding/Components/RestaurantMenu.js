@@ -11,6 +11,15 @@ const RestaurantMenu = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0)
+
+        // const time = setInterval(() => {console.log("calling every sec!!")}, 1000);
+
+        // cleanup if i will leave the componant!
+        return () => {
+            console.log("cleanup");
+            console.log("this will called after the componant is removed from the dom!")
+            // clearInterval(time);
+        };
     }, [resId]);
 
     if (restInfo === null) {
