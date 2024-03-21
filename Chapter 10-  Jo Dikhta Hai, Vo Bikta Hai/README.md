@@ -8,10 +8,10 @@ To get started, follow these steps to install Tailwind CSS directly from the bro
 1. Visit [Tailwind CSS documentation](https://tailwindcss.com/docs/guides/parcel).
 2. Follow the instructions provided to install Tailwind CSS using Parcel.
 
-for the material ui website (https://mui.com/material-ui/)
-for the bootstrap website (https://getbootstrap.com/)
-for the chakra-ui website (https://chakra-ui.com/) 
-for the ant.design website (https://ant.design/components/button) 
+for the material ui website (https://mui.com/material-ui/).
+for the bootstrap website (https://getbootstrap.com/).
+for the chakra-ui website (https://chakra-ui.com/).
+for the ant.design website (https://ant.design/components/button).
 
 
 
