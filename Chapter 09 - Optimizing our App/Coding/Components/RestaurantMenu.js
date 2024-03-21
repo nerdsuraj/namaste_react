@@ -7,7 +7,7 @@ import RestaurantCategory from "./RestaurantCategory.js";
 const RestaurantMenu = () => {
     const { resId } = useParams();
     const restInfo = useRestaurantMenu(resId);
-    console.log("🚀 ~ RestaurantMenu ~ restInfo:", restInfo)
+    // console.log("🚀 ~ RestaurantMenu ~ restInfo:", restInfo)
 
     useEffect(() => {
         window.scrollTo(0, 0)

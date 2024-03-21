@@ -9,6 +9,7 @@ const Body = () => {
     const [restaurantList, setRestaurantList] = useState([]);
     const [originalRestaurantList, setOriginalRestaurantList] = useState([]);
     const [showTopRated, setShowTopRated] = useState(false);
+    const [searchText, setSearchText] = useState("");
 
     useEffect(() => {
         fetchApiData();
@@ -24,7 +25,7 @@ const Body = () => {
             let finalData = dataManipulate.map((info) => {
                 return info.info;
             })
-            console.log("🚀 ~ fetchApiData ~ finalData:", finalData)
+            // console.log("🚀 ~ fetchApiData ~ finalData:", finalData)
             setRestaurantList(finalData);
             setOriginalRestaurantList(finalData);
         }
@@ -67,7 +68,26 @@ const Body = () => {
                 <input
                     type="text"
                     className="search-input"
-                    placeholder="Search a restaurant you want...">
+                    placeholder="Search a restaurant you want..."
+                    value={searchText}
+                    onChange={(e) => {
+                        const searchTextValue = e.target.value.toLowerCase();
+                        setSearchText(searchTextValue);
+
+                        if (searchTextValue === "") {
+                            setRestaurantList(originalRestaurantList);
+                        } else {
+                            const filteredList = originalRestaurantList.filter(
+                                (res) =>
+                                    res.name.toLowerCase().includes(searchTextValue) ||
+                                    res.cuisines.some((cuisine) =>
+                                        cuisine.toLowerCase().includes(searchTextValue)
+                                    )
+                            );
+                            setRestaurantList(filteredList);
+                        }
+                    }}
+                >
                 </input>
                 <button className="search-btn" onClick={searchList}>
                     Search
@@ -85,11 +105,11 @@ const Body = () => {
                 {restaurantList.length > 0 && (
                     <div className="restaurant-list">
                         {restaurantList.map((restaurant, index) => {
-                            return(
-                            <Link key={restaurant.id}
-                                to={"/restaurants/" + restaurant.id}>
-                                <RestaurantCard {...restaurant} />
-                            </Link>
+                            return (
+                                <Link key={restaurant.id}
+                                    to={"/restaurants/" + restaurant.id}>
+                                    <RestaurantCard {...restaurant} />
+                                </Link>
                             );
                         })}
                     </div>
