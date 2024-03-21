@@ -4,11 +4,13 @@ import { BsPersonCircle } from "react-icons/bs";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import useOnline from "../utils/useOnline";
 
 
 
 const Header = () => {
     const [btnName, setBtnName] = useState("Login");
+    const onlineStatus = useOnline();
 
     return (
         <div className='header'>
@@ -49,6 +51,14 @@ const Header = () => {
                             contact
                         </Link>
                     </li>
+                    {/* <li>
+                        <Link to="/grocery" className="dropdown-item">
+                            <span style={{ padding: "7px" }}>
+                                <i className="fa-solid fa-address-book"></i>
+                            </span>
+                            Grocery
+                        </Link>
+                    </li> */}
                 </ul>
             </div>
             <div className="logout-container" onClick={() => {
@@ -56,11 +66,15 @@ const Header = () => {
                     ? (setBtnName("Logout"), toast.success("User Logged In"))
                     : (setBtnName("Login"), toast.success("User Logged Out"));
             }}>
+                <div className="h-online">
+                    Online: {onlineStatus ? "🟢" : "🔴"}
+                </div>
                 <a href="#" className="dropdown-item">
                     <span style={{ padding: "7px" }}>
                         <i className="fa-solid fa-user"></i>
                     </span>{btnName}
                 </a>
+
             </div>
         </div>
     )

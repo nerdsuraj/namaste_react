@@ -103,7 +103,9 @@ body {
 }
 
 .logout-container {
-    margin-left: 60%;
+    margin-left: 57%;
+    display: flex;
+    gap: 29px;
 }
 
 
@@ -358,13 +360,14 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
 .FAQ-des {
     border-top: 1px solid #0000002a;
     width: 100%;
     transition: all .6s cubic-bezier(.215, .61, .355, 1);
     overflow: hidden;
     padding: 10px 0;
-  }
+}
 
 .menu-constainer {
     margin: 100px auto 20px;
@@ -557,6 +560,10 @@ body {
     box-shadow: 0 3px 8px #e9e9eb;
     background-color: #fff;
 
+}
+
+.h-online {
+    cursor: default !important;
 }
 
 
