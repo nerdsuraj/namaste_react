@@ -10,7 +10,7 @@ import useOnline from "../utils/useOnline";
 
 const Header = () => {
     const [btnName, setBtnName] = useState("Login");
-    const onlineStatus = useOnline();
+    const onlineStatus = useOnline(); //custom hooks
 
     return (
         <div className='header'>
