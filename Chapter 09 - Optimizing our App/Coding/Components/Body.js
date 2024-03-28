@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard ,{withPromtedLabel} from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./shimmer";;
@@ -10,6 +10,9 @@ const Body = () => {
     const [originalRestaurantList, setOriginalRestaurantList] = useState([]);
     const [showTopRated, setShowTopRated] = useState(false);
     const [searchText, setSearchText] = useState("");
+
+    const RestaurantCardPromoted = withPromtedLabel(RestaurantCard);
+
 
     useEffect(() => {
         fetchApiData();
@@ -25,7 +28,7 @@ const Body = () => {
             let finalData = dataManipulate.map((info) => {
                 return info.info;
             })
-            // console.log("🚀 ~ fetchApiData ~ finalData:", finalData)
+            console.log("🚀 ~ fetchApiData ~ finalData:", finalData)
             setRestaurantList(finalData);
             setOriginalRestaurantList(finalData);
         }
