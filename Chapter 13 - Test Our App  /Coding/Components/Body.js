@@ -74,6 +74,7 @@ const Body = () => {
                 <input
                     type="text"
                     className="search-input"
+                    data-testid="search-input"
                     placeholder="Search a restaurant you want..."
                     value={searchText}
                     onChange={(e) => {
